@@ -36,7 +36,7 @@ random.forEach(span => {
             e.target.parentElement.querySelectorAll(".active").forEach(element =>{
                 element.classList.remove("active");
             if(e.target.dataset.background === 'no'){
-                document.querySelector(".landing-page").style.backgroundImage = 'url("../img/1.jpg")'
+                document.querySelector(".landing-page").style.backgroundImage = 'url("img/1.jpg")'
             }
             });
             e.target.classList.add("active");
@@ -81,7 +81,7 @@ colorbar.forEach(li => {
     
 });
 // select landing page
-let layout = document.querySelector('.landing-page');
+var layout = document.querySelector('.landing-page');
 // array of img
 var imgesArray =["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"];
 function intervelbk(){
@@ -91,9 +91,39 @@ IntervalControll = setInterval(function(){
 // random number
     var rondom = Math.floor(Math.random()*imgesArray.length); 
 // set image
-    layout.style.backgroundImage = 'url("/img/'+imgesArray[rondom]+'")';
+    layout.style.backgroundImage = 'url("img/'+imgesArray[rondom]+'")';
 }
     ,5000)
 }
 }
 intervelbk();
+
+var ourskillspage = document.querySelector(".skills-box");
+var aboutus = document.querySelector(".About-box");
+window.onscroll = function(){
+    var skilloffsetTop = ourskillspage.offsetTop;
+    var skilloffsetHeight = ourskillspage.offsetHeight;
+
+    // about Offset Top
+    var aboutOffsetTop = aboutus.offsetTop;
+    // about offset Height
+    var aboutoffsetHeight = aboutus.offsetHeight;
+    //window height
+    var windowheight = this.innerHeight;
+    //window scrollTop
+    var windowscrollTop = this.pageYOffset;
+    if(windowscrollTop > (aboutOffsetTop + aboutoffsetHeight - windowheight)){
+        document.querySelector(".About-box .img-box img").style.filter = 'grayscale(0%)';
+        document.querySelector(".About-box .info p").style.opacity = '1';
+    }
+
+    if(windowscrollTop > (skilloffsetTop + skilloffsetHeight - windowheight)){
+        var spanskills = document.querySelectorAll(".skills-box .prograss span");
+        spanskills.forEach(skill =>{
+            skill.style.width = skill.dataset.pro;
+            console.log(skill.dataset.pro);
+        });
+    }
+};
+
+
