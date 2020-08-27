@@ -369,12 +369,7 @@ z-index: 1;
         text-align: center;
     }
    .About-box .img-box img{
-        width: 200px;
-    }
-    .About-box .img-box{
-        flex: 1;
-        text-align: left;
-        width: 100px;
+        width: 100%;
     }
 }
 /* end media modile web */
