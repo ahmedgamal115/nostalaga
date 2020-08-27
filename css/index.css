@@ -8,8 +8,8 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 .contener{
-    padding-top: 50px;
-    padding-left: 50px;
+    padding-top: 20px;
+    padding-left: 20px;
     margin:auto;
     width: 100%;
 }
@@ -20,7 +20,7 @@ body{
     left: -200px;
     width: 200px;
     min-height: 100vh;
-    z-index: 10000;
+    z-index: 100;
     background-color: hsl(206deg 96% 10%);
     transition: 0.5s ease all;
 }
@@ -322,6 +322,80 @@ z-index: 1;
 }
 
 /* end skills section */
+/* start Galary section */
+.galary-box{
+    padding: 15px; 
+    margin-bottom: 15px;
+}
+.galary-box .galary-info{
+
+}
+.galary-box .galary-info h2{
+    color: var(--main-color);
+    font-size: 30px;
+    font-weight:bold;
+    text-align: center;
+}
+.imge-box{
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0%);
+    text-align: center;
+    width: 100%;
+}
+.imge-box img{
+    width: 300px;
+    padding: 5px;
+    background-color: khaki;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.popcover{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0,0.7);
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+.pop-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: khaki;
+    border: 1px solid black;
+    padding: 5px;
+    z-index: 1001;
+}
+.pop-box img{
+    max-width: 100%;
+}
+.pop-box h2{
+    text-align: center;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    color: var(--main-color);
+    position: relative;
+}
+.pop-box .buttonn-pop{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--main-color);
+    color: aliceblue;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 7px;
+    border-radius: 50%;
+}
+/* end Galary section */
 /* start media modile web */
 @media(max-width:767px){
     .landing-page{
@@ -368,7 +442,7 @@ z-index: 1;
     .info{
         text-align: center;
     }
-   .About-box .img-box img{
+    .About-box .img-box img{
         width: 100%;
     }
     .contener{
