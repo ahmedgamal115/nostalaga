@@ -368,8 +368,12 @@ z-index: 1;
     .info{
         text-align: center;
     }
-    .About-box .img-box img{
-        width: 10px;
+   .About-box .img-box img{
+        width: 200px;
+    }
+    .About-box .img-box{
+        flex: 1;
+        text-align: left;
     }
 }
 /* end media modile web */
