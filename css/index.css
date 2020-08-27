@@ -368,5 +368,8 @@ z-index: 1;
     .info{
         text-align: center;
     }
+    .About-box .img-box img{
+        width: 200px;
+    }
 }
 /* end media modile web */
