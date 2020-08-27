@@ -374,6 +374,7 @@ z-index: 1;
     .About-box .img-box{
         flex: 1;
         text-align: left;
+        width: 100px;
     }
 }
 /* end media modile web */
