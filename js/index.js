@@ -121,9 +121,61 @@ window.onscroll = function(){
         var spanskills = document.querySelectorAll(".skills-box .prograss span");
         spanskills.forEach(skill =>{
             skill.style.width = skill.dataset.pro;
-            console.log(skill.dataset.pro);
         });
     }
 };
+// start galary section
+    var pop = document.querySelectorAll(".imge-box img");
+    pop.forEach(img =>{
+        img.addEventListener('click',(e)=>{
+            // create layout for pop imega when click
+            var popelment = document.createElement('div');
+            //crate class for pop layout
+            popelment.className = 'popcover';
+            //insert pop layout to body
+            document.body.appendChild(popelment);
+            //create dive in pop to insert image
+            var popbox = document.createElement("div");
+            //create class for div of image
+            popbox.className = 'pop-box';
+            //check if image has alt or no 
+            if(img.alt !== ""){
+                // create contant text 
+                var altpop = document.createElement('h2');
+                //create text value 
+                var textpop = document.createTextNode(img.alt);
+                //insert text in contant h2
+                altpop.appendChild(textpop);
+                //insert altpop in popbox
+                popbox.appendChild(altpop);
+            }
+            //create image element
+            var popimg = document.createElement("img");
+            //take src from image
+            popimg.src = img.src;
+            //insert image in div image pop
+            popbox.appendChild(popimg);
+            //insert image pop to body
+            document.body.appendChild(popbox);
+            //create button for closs pop
+            var buttonpop = document.createElement('div');
+            //create class for buttonn pop
+            buttonpop.className = "buttonn-pop";
+            //create placeholder of button
+            var buttontextpop = document.createTextNode("X");
+            //insert value in button
+            buttonpop.appendChild(buttontextpop);
+            //insert buttonpop in popbox
+            popbox.appendChild(buttonpop);
+        });
+    });
+    //button to close pop-box
+    document.addEventListener('click',(e) =>{
+        if(e.target.className == 'buttonn-pop'){
+            e.target.parentNode.remove();
+            document.querySelector('.popcover').remove();
+        }
+    });
+// end galary section
 
 
