@@ -449,5 +449,8 @@ z-index: 1;
         padding-top: 0px;
         padding-left: 0px;
     }
+    .pop-box img{
+        min-width: 100%;
+    }
 }
 /* end media modile web */
