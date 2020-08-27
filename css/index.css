@@ -8,8 +8,8 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 .contener{
-    padding-top: 0px;
-    padding-left: 0px;
+    padding-top: 50px;
+    padding-left: 50px;
     margin:auto;
     width: 100%;
 }
@@ -370,6 +370,10 @@ z-index: 1;
     }
    .About-box .img-box img{
         width: 100%;
+    }
+    .contener{
+        padding-top: 0px;
+        padding-left: 0px;
     }
 }
 /* end media modile web */
