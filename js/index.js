@@ -57,6 +57,13 @@ document.querySelector(".Nav-bar").onclick =function(){
     this.classList.toggle("activ");
     document.querySelector('.list').classList.toggle("on");
 };
+document.querySelectorAll('.list li a').forEach( a =>{
+    a.addEventListener('click',(e)=>{
+        document.querySelector(".Nav-bar").classList.toggle("activ");
+        document.querySelector('.list').classList.toggle("on");
+    });
+});
+
 
 document.querySelector(".fa-cog").onclick = function (){
     this.style.visibility= "hidden";
@@ -178,4 +185,10 @@ window.onscroll = function(){
     });
 // end galary section
 
-
+document.querySelectorAll('.bublle .bublle-con').forEach(bublle =>{
+    this.addEventListener('click',(e)=>{
+        document.querySelector(e.target.dataset.section).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
