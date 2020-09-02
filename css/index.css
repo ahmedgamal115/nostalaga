@@ -542,7 +542,8 @@ z-index: 1;
 .testmonials .ts-list{
     position: relative;
     z-index: 2;
-    width: calc(96% / 3);
+    width: calc(96%);
+    margin-bottom: 20px;
     float: left;
     background: aliceblue;
     padding: 20px;
